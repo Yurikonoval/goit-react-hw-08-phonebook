@@ -1,17 +1,11 @@
 .list {
-  margin: 0;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0;
   list-style: none;
 }
-.button {
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-.button:hover,
-.button:focus {
-  color: white;
-  background-color: steelblue;
-}
+
 .contactData {
   margin: 15px auto 15px 0;
   font-weight: 500;

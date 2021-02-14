@@ -12,7 +12,7 @@ const styles = {
     color: '#2A363B',
   },
   activeLink: {
-    color: '#E84A5F',
+    color: '#007bff',
   },
 };
 
@@ -21,10 +21,6 @@ const Navigation = () => {
 
   return (
     <nav>
-      <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-        Home
-      </NavLink>
-
       {isLoggedIn && (
         <NavLink
           to="/contacts"

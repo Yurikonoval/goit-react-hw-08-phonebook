@@ -10,7 +10,7 @@ const styles = {
     color: '#2A363B',
   },
   activeLink: {
-    color: '#E84A5F',
+    color: '#007bff',
   },
 };
 
@@ -23,7 +23,7 @@ export default function AuthNav() {
         style={styles.link}
         activeStyle={styles.activeLink}
       >
-        Регистрация
+        Registration
       </NavLink>
       <NavLink
         to="/login"
@@ -31,7 +31,7 @@ export default function AuthNav() {
         style={styles.link}
         activeStyle={styles.activeLink}
       >
-        Логин
+        Log in
       </NavLink>
     </div>
   );

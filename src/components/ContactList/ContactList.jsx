@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { operations, selectors } from 'redux/contacts';
+import Button from 'react-bootstrap/Button';
 import s from './ContactList.module.css';
 
 export default function ContactList() {
@@ -24,13 +25,13 @@ export default function ContactList() {
           <p className={s.contactData}>
             {name}: {number}
           </p>
-          <button
-            className={s.button}
+          <Button
+            variant="danger"
             type="button"
             onClick={() => onDeleteContact(id)}
           >
             Delete
-          </button>
+          </Button>
         </li>
       ))}
     </ul>

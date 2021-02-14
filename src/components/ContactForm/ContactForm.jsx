@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { operations, selectors } from 'redux/contacts';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import s from './ContactForm.module.css';
 
 export default function ContactForm() {
@@ -46,33 +48,31 @@ export default function ContactForm() {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit} className={s.form}>
-      <label className={s.label}>
-        <span className={s.namespan}>Name</span>
-        <input
+    <Form action="" onSubmit={handleSubmit} className={s.form}>
+      <Form.Group controlId="formBasicName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control
           type="text"
           name="name"
           value={name}
           onChange={handleChange}
-          className={s.input}
           placeholder="Enter name"
         />
-      </label>
-      <label className={s.label}>
-        <span className={s.numberspan}>Number</span>
-        <input
+      </Form.Group>
+      <Form.Group controlId="formBasicNumber">
+        <Form.Label>Number</Form.Label>
+        <Form.Control
           type="text"
           name="number"
           placeholder="Enter phone number"
           value={number}
           onChange={handleChange}
-          className={s.input}
         />
-      </label>
-      <button className={s.button} type="submit">
+      </Form.Group>
+      <Button variant="primary" type="submit">
         Add contact
-      </button>
-    </form>
+      </Button>
+    </Form>
   );
 }
 

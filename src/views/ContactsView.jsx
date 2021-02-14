@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { fetchContacts } from '../redux/contacts/contacts-operations';
 
@@ -7,6 +7,12 @@ import Container from '../components/Container';
 import ContactForm from '../components/ContactForm/ContactForm';
 import Filter from '../components/Filter/Filter';
 import ContactList from '../components/ContactList/ContactList';
+
+const styles = {
+  title: {
+    textAlign: 'center',
+  },
+};
 
 export default function ContactsView() {
   const dispatch = useDispatch();
@@ -16,10 +22,14 @@ export default function ContactsView() {
   }, [dispatch]);
 
   return (
-    <Container className="container">
-      <h1 className="title">Phonebook</h1>
+    <Container>
+      <h1 className="title" style={styles.title}>
+        Phonebook
+      </h1>
       <ContactForm />
-      <p className="title statistics">Statistics</p>
+      <h2 className="title statistics" style={styles.title}>
+        Statistics
+      </h2>
       <Filter />
       <ContactList />
     </Container>
